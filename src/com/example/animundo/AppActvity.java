@@ -13,8 +13,8 @@ import android.widget.GridView;
 
 public class AppActvity extends Activity {
 
-	private ArrayList<String> imagePaths = new ArrayList<String>();
     private GridViewImageAdapter adapter;
+    private GridItemAdapter gridAdapter;
     private GridView gridView;
     private int columnWidth;
     private Utils utils;
