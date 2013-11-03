@@ -20,7 +20,7 @@ public class GridItemAdapter extends ArrayAdapter<Animal> {
 	int layoutResourceId;
 	ArrayList<Animal> data = new ArrayList<Animal>();
 	
-	public GridItemAdapter(Context context, int resource,
+	public GridItemAdapter(Context context,
 			int layoutResourceId, ArrayList<Animal> dados) {
 		
 		super(context, layoutResourceId, dados);
@@ -30,14 +30,32 @@ public class GridItemAdapter extends ArrayAdapter<Animal> {
 	}
 	
 	@Override
+	public Animal getItem(int position) {
+		
+		return data.get(position);
+	}
+	
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return data.size();
+	}
+	
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+		
+	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		
 		View row = convertView;
 		RecordHolder holder = null;
 
 		if (row == null) {
-			LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-			row = inflater.inflate(layoutResourceId, parent, false);
+			LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			row = inflater.inflate(layoutResourceId,null);
 
 			holder = new RecordHolder();
 			holder.txtTitle = (TextView) row.findViewById(R.id.nomeAnimal);

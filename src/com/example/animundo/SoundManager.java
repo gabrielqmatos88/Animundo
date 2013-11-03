@@ -40,7 +40,7 @@ public class SoundManager {
 	public static  void initSounds(Context theContext)
 	{
 		 mContext = theContext;
-	     mSoundPool = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
+	     mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
 	     mSoundPoolMap = new HashMap<Integer,Integer>();
 	     mAudioManager = (AudioManager)mContext.getSystemService(Context.AUDIO_SERVICE);
 	} 
