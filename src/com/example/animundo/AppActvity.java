@@ -65,6 +65,7 @@ public class AppActvity extends Activity {
 		CriarAnimal("Ovelha", R.drawable.ovelha, R.raw.ovelha);
 		CriarAnimal("Passaro", R.drawable.passaro, R.raw.passaro);
 		CriarAnimal("Pato", R.drawable.pato, R.raw.pato);
+		CriarAnimal("Peru", R.drawable.peru, R.raw.peru);
 		CriarAnimal("Porco", R.drawable.porco, R.raw.porco);
 		CriarAnimal("Sapo", R.drawable.sapo, R.raw.sapo);
 		CriarAnimal("Urso", R.drawable.urso, R.raw.urso);
