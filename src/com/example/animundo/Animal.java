@@ -6,7 +6,25 @@ public class Animal {
 
 	private String nome;
 	private Bitmap imagem;
+	private int soundId;
+	private int imageId;
 	
+	public int getSoundId() {
+		return soundId;
+	}
+
+	public void setSoundId(int soundId) {
+		this.soundId = soundId;
+	}
+
+	public int getImageId() {
+		return imageId;
+	}
+
+	public void setImageId(int imageId) {
+		this.imageId = imageId;
+	}
+
 	public Animal(String nm,Bitmap figura)
 	{
 		nome = nm;

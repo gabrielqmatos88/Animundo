@@ -16,6 +16,7 @@ public class AppActvity extends Activity {
     private GridViewImageAdapter adapter;
     private GridItemAdapter gridAdapter;
     private GridView gridView;
+    private ArrayList<Animal> animais;
     private int columnWidth;
     private Utils utils;
 	
@@ -23,10 +24,11 @@ public class AppActvity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_app_actvity);
-		utils = new Utils(this);
-		gridView = (GridView) findViewById(R.id.gridView);
-		InitilizeGridLayout();
-		adapter = new GridViewImageAdapter(AppActvity.this,columnWidth);
+		animais = new ArrayList<Animal>();
+//		utils = new Utils(this);
+//		gridView = (GridView) findViewById(R.id.gridView);
+//		InitilizeGridLayout();
+//		adapter = new GridViewImageAdapter(AppActvity.this,columnWidth);
 		gridView.setAdapter(adapter);
 	}
 	
